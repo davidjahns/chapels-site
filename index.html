@@ -1,0 +1,1135 @@
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>{Title}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://static.tumblr.com/smaukle/wXOnk6nhp/animate.css">
+        <!--Google fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
+         
+        
+        
+        
+        <style>
+        
+            .hidden-scroll{opacity:0}
+            .visible-scroll{opacity:1}
+         
+            body {
+                background: url("http://static.tumblr.com/smaukle/WdCnk6z6x/chapels-background.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family: "proxima-nova",sans-serif;
+                color: #212121;
+                font-size: 16px;
+                font-weight: 300;
+            }
+            
+            .container-fluid {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+            
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Pathway Gothic One', sans-serif;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            
+            h2 {
+                /*padding-bottom: 10px;*/
+            }
+            
+            section {
+                background: #fafafa;
+                padding: 20px;
+                width: 100%;
+            }
+ 
+            
+            ul {
+                list-style: none;
+                padding-left: 0;
+            }
+            
+            a:hover {
+                text-decoration: none;
+            }
+            
+            .btn {
+                border-radius: none;
+            }
+            
+            hr {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+            
+            
+            
+            /*-----sticky nav styles-----*/
+            .sticky-nav {
+              position: fixed;
+              width: 100%;
+              text-align: center;
+              padding: 10px;
+              background: rgba(158,158,158,.98);
+              z-index: 1;
+              opacity: 0.0;
+              transition: all 0.4s ease;
+              box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            }
+            
+            .sticky-nav.sticky {
+                opacity: 1.0;
+            }
+            
+            .sticky-nav nav img {
+                max-height: 55px;
+                margin: 0 auto;
+            }
+            
+            @media (max-width: 360px) {
+                .sticky-nav img {
+                    padding-top: 10px;
+                }
+            }
+            
+            .sticky-nav i {
+                line-height: 55px;
+            }
+            
+            
+            nav .col-xs-3 {
+                line-height: 55px;
+            }
+            
+            .sticky-nav hr,
+            #blog hr {
+                border-color: #212121;
+            }
+            
+            
+            /*-----------dropdown nav----------*/
+              .nav-links {
+                  text-transform: uppercase;
+                  display: none;
+                  font-size: 18px;
+              }
+              
+              .nav-links ul {
+                  padding-left: 0;
+              }
+              
+              .nav-links ul li {
+                  padding: 5px 0;
+              }
+              
+              .sticky-nav a {
+                  color: #212121;
+              }
+              
+              .sticky-nav a:hover {
+                  color: #fafafa;
+              }
+            
+            
+            
+            /*----header styles------*/
+            
+            header {
+                text-align: center;
+                padding-top: 100px;
+                padding-right: 15px;
+                padding-bottom: 50px;
+                padding-left: 15px;
+            }
+            
+            
+            .promo-icons li {
+                display: inline-block;
+                background: #fff;
+                padding: 10px;
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                font-size: 18px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+            
+            .promo-icons li a {
+                color: #212121;
+            }
+            
+            
+            
+            /*----blog section --------------*/
+            #blog h2 a {
+                color: #212121;
+            }
+            
+            
+            
+            /*---- global post styles------*/
+            
+            .post {
+                background: #fff;
+                margin-bottom: 10px;
+                /*border: 1px solid #212121;*/
+                padding: 10px 20px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+            
+            .post>h3 {
+                margin-top: 10px;
+            }
+            
+            .post.audio,
+            .post.video,
+            .post.photo,
+            .post.quote {
+                padding-top: 20px;
+            }
+            
+            .post hr {
+                box-shadow: none;
+            }
+            
+            .post .iframe>iframe {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            .photo-wrap img {
+                margin: 0 auto 20px auto;
+                width: 100%;
+            }
+            
+            /*.timestamp { only using if timestamp on top of posts*/
+            /*    padding-top: 5px;*/
+            /*}*/
+            
+            .timestamp i {
+                padding-right: 3px;
+            }
+            
+            .timestamp, .notes-text {
+                line-height: 26px;
+            }
+            
+            .timestamp, 
+            .like-icon, 
+            .reblog-icon {
+                display: inline-block;
+                color: #aaa;
+            }
+            
+            .like-icon, .reblog-icon {
+                float: right;
+                padding: 3px;
+                
+            }
+            .notes-text {
+                float: right;
+                padding-right: 6px;
+            }
+            
+            .timestamp a,
+            .like-icon a,
+            .notes-text a {
+                text-decoration: none;
+                color: #aaa;
+            }
+            
+            .notes {
+                list-style: none;
+                padding-left: 0;
+            }
+            
+            .notes li {
+                padding-bottom: 5px;
+            }
+            
+            .notes img.avatar {
+                padding-right: 5px;
+            }
+            
+            #previous-post {
+                float: left;
+            }
+            
+            #next-post {
+                float: right;
+            }
+            
+            
+            
+            
+            /*-----promo left side section------*/
+            
+            #promo {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            
+            .promo-section {
+                margin-bottom: 75px;
+            }
+            
+            /*---bandsintown widget---*/
+            .bit-track-artist-header {
+                display: none !important;
+            }
+            
+            a.bit-event-description-link {
+                background: #212121;
+            }
+            
+            /*---twitter widget---*/
+            .timeline-header {
+                display: none !important;
+            }
+            
+    
+        
+
+            /*-----about section styles-----*/
+            #about {
+                background: transparent;
+            }
+            
+            #about img {
+                border: 2px solid #212121;
+            }
+            
+            
+            
+            
+            /*-----footer styles------*/
+            
+            footer {
+                background: #9e9e9e;
+                padding: 25px;
+            }
+            
+            footer a {
+                color: #e0e0e0;
+            }
+            
+            footer a:hover {
+                color: #fafafa;
+            }
+            
+            
+            
+            /*---------INDIVIDUAL POST STYLES---------*/
+            
+            
+            /*Quote Post*/
+            
+            .the-quote {
+                font-size: 24px;
+            }
+            
+            .source {
+                font-weight: 500;
+            }
+            
+            
+            /*Link Post*/
+            .link .link {
+                display: block;
+                padding-top: 10px;
+            }
+            
+            /*Chat Post*/
+            .chat .label {
+                color: #212121;
+                font-size: 16px;
+            }
+            
+            .chat ul {
+                padding-top: 10px;
+            }
+            
+            .chat li {
+                padding: 5px 0;
+            }
+            
+            .chat li:nth-child(2) {
+                background: #eee;
+            }
+            
+            /*Audio Post*/
+            .caption {
+                padding-top: 15px;
+            }
+            
+            .video-player-250,
+            .video-player-400,
+            .spotify-player-250,
+            .spotify-player-400 {
+                display: none;
+            }
+            
+            
+          /*-------mobile styles---------*/
+
+          
+          @media only screen and (max-width: 767px) {
+              /*full size mobile: http://static.tumblr.com/smaukle/vDgnk70ii/chapels-background-mobile.jpg*/
+              /*mobile photo2: http://static.tumblr.com/smaukle/HJsnk74c2/chapels-background-mobile2.jpg*/
+             body {
+                background-image: none;
+                background: #eee;
+              }
+              
+              header {
+                background-image: url("http://static.tumblr.com/smaukle/vDgnk70ii/chapels-background-mobile.jpg");
+                background-position: center top;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: auto;
+              }
+              
+              
+              
+          }
+          
+          @media only screen and (max-width: 560px) {
+              
+              header h3 {
+                  font-size: 16px;
+              }
+              
+              .video-player-500,
+              .spotify-player-500 {
+                  display: none;
+              }
+              
+              .video-player-400,
+              .spotify-player-400 {
+                  display: block;
+              }
+              
+          } 
+          
+          
+          
+          
+         @media only screen and (max-width: 460px) {
+             
+              .video-player-250,
+              .spotify-player-250 {
+                  display: block;
+              }
+              
+              .video-player-400,
+              .video-player-500,
+              .spotify-player-400,
+              .spotify-player-500 {
+                  display: none;
+              }
+          }
+          
+            
+            
+        </style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    <body>
+        <div class="container-fluid">
+            <div class="sticky-nav animated">
+                <nav class="row">
+                    <div class="col-xs-3"> 
+                        <a  id="menu-icon"><i class="fa fa-bars fa-2x"></i></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a id="sticky-nav-logo" href="#home"><img class="img-responsive" src="http://static.tumblr.com/smaukle/s0jnk5dl7/chapelslogo.svg"></a>
+                    </div>
+                    
+                    <div class="col-xs-3">
+                        <a href="spotify:album:2sjXstf7UibvBMFZOcv38E"><i class="fa fa-play-circle fa-2x"></i></a>
+                    </div>
+                    
+                    <div class="nav-links animated">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul>
+                                    <li><a href="#home"><span>Home<span></a></li>
+                                    <li><a href="#videos"><span>Videos<span></a></li>
+                                    <li><a href="#tour-dates"><span>Tour Dates<span></a></li>
+                                    <li><a href="#music"><span>Music<span></a></li>
+                                    <li><a href="#news"><span>News<span></a></li>
+                                    <li><a href="#about"><span>About<span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <header id="home">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    
+                        <img class="animated fadeIn" src="http://static.tumblr.com/smaukle/s0jnk5dl7/chapelslogo.svg">
+                       
+                       {block:Description}
+                        <h3 class="animated fadeIn" id="description">{Description}</h3>
+                        {/block:Description}
+                        
+                        <ul class="promo-icons">
+                            <li class="animated fadeInLeft">
+                                <a href="spotify:album:2sjXstf7UibvBMFZOcv38E"><i class="fa fa-spotify"></i></a>
+                            </li>
+                            <li class="animated fadeInUp">
+                                <a href="https://itunes.apple.com/us/album/waves-single/id1012604069"><i class="fa fa-apple"></i></a>
+                            </li>
+                            <li class="animated fadeInDown">
+                                <a href="https://soundcloud.com/chapelsmusic"><i class="fa fa-soundcloud"></i></a>
+                            </li>
+                            <li class="animated fadeInUp">
+                                <a href="http://bit.ly/1RNKDTu"><i class="fa fa-youtube"></i></a>
+                            </li>
+                            <li class="animated fadeInRight">
+                                <a href="https://instagram.com/chapelsmusic/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </header>
+            
+            
+            
+            <section id="blog">
+                <div class="row">
+                
+                    <div class="col-sm-12 col-md-4 col-md-offset-1">
+                        <div class="promo-section animated" id="videos">
+                            <h2>Videos</h2>
+                            <hr>
+                           
+                        </div>
+                        
+                        <div class="promo-section animated" id="tour-dates">
+                            <h2>Tour Dates</h2>
+                            <hr>
+                          
+
+                        </div>
+                        
+                        <div class="promo-section animated" id="music">
+                            <h2>Listen</h2>
+                            <hr>
+                            <iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/211202256&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                         
+                        </div>
+                        
+                        <div class="promo-section animated hidden-xs hidden-sm">
+                            <h2>Instagram</h2>
+                            <hr>
+                            <iframe src="http://widget.websta.me/in/chapelsmusic/?s=130&w=3&h=3&b=1&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width: 100%; height: 440px;" ></iframe> <!-- websta - web.stagram.com -->
+                            
+                        </div>
+                        
+                        <div class="promo-section hidden-xs hidden-sm animated">
+                            <h2>Tweets</h2>
+                            <hr>
+                            <a class="twitter-timeline" href="https://twitter.com/ChapelsMusic" data-widget-id="568823312583643136" width="100%" height="100%" data-chrome="nofooter transparent" border-color="#212121">Tweets by @ChapelsMusic</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                        
+                        
+                    </div>
+                    <!--end col-4 for promo content-->
+                    
+                    <div class="col-sm-12 col-md-6" id="news">
+                        <h2><a href="{BlogURL}">News</a></h2>
+                        <hr>
+                        <ul id="posts">
+                        {block:Posts}
+                            
+                            {block:Text}
+                                <li class="post text animated">
+                                
+                                    {block:Title}
+                                        <h3><a href="{Permalink}">{Title}</a></h3>
+                                    {/block:Title}
+                                    <p>{Body}</p>
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                           {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                    
+                                </li>
+                            {/block:Text}
+                            
+                            
+                            
+                            {block:Photo}
+                                <li class="post photo animated">
+                                    <div class="photo-wrap">
+                                        <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="img-responsive"/>
+                                    </div>
+            
+                                    {block:Caption}
+                                        <div class="caption">{Caption}</div>
+                                    {/block:Caption}
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Photo}
+                            
+                            
+                            
+                            
+                            
+                            {block:Panorama}
+                                <li class="post panorama animated">
+                                    {LinkOpenTag}
+                                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                    {LinkCloseTag}{block:Caption}
+                                        <div class="caption">{Caption}</div>
+                                    {/block:Caption}
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Panorama}
+                            
+                            
+                            
+                            
+                            {block:Photoset}
+                                <li class="post photoset animated">
+                                    {Photoset-500}{block:Caption}
+                                        <div class="caption">{Caption}</div>
+                                    {/block:Caption}
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Photoset}
+                            
+                            
+                            
+                            
+                            {block:Quote}
+                                <li class="post quote animated">
+                                    <p class="the-quote">"{Quote}"</p>
+            
+                                    {block:Source}
+                                        <div class="source">-{Source}</div>
+                                    {/block:Source}
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Quote}
+                            
+                            
+                            
+                            {block:Link}
+                                <li class="post link animated">
+                                
+                                    <a href="{URL}" class="link" {Target}>{Name}</a>
+            
+                                    {block:Description}
+                                        <div class="description">{Description}</div>
+                                    {/block:Description}
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp">
+                                                    <i class="fa fa-clock-o"></i>
+                                                    <a href="{Permalink}">{TimeAgo}</a>
+                                                </p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span>
+                                            <span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Link}
+                            
+                            
+                            
+                            
+                            {block:Chat}
+                                <li class="post chat animated">
+                                    {block:Title}
+                                        <h3><a href="{Permalink}">{Title}</a></h3>
+                                    {/block:Title}
+            
+                                    <ul class="chat">
+                                        {block:Lines}
+                                            <li class="{Alt} user_{UserNumber}">
+                                                {block:Label}
+                                                    <span class="label">{Label}</span>
+                                                {/block:Label}{Line}
+                                            </li>
+                                        {/block:Lines}
+                                    </ul>
+                                    
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Chat}
+                            
+                            
+                            
+                            
+                            {block:Video}
+                                <li class="post video animated">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="video-player-500 iframe">{Video-500}</div>
+                                            <div class="video-player-400 iframe">{Video-400}</div>
+                                            <div class="video-player-250 iframe">{Video-250}</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Caption}
+                                                <div class="caption">{Caption}</div>
+                                            {/block:Caption}
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Video}
+                            
+                            
+                            
+                            {block:Audio}
+                                <li class="post audio animated">
+                                
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        {block:AudioEmbed}
+                                            <div class="spotify-player-500 iframe">{AudioEmbed-500}</div>
+                                            <div class="spotify-player-400 iframe">{AudioEmbed-400}</div>
+                                            <div class="spotify-player-250 iframe">{AudioEmbed-250}</div>
+                                        {/block:AudioEmbed} 
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12">   
+                                            {block:Caption}
+                                                <div class="caption">{Caption}</div>
+                                            {/block:Caption}
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <!--post notes section: everything in between these comments should be identical on all post types-->
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:Date}
+                                                <p class="timestamp"><i class="fa fa-clock-o"></i><a href="{Permalink}">{TimeAgo}</a></p>
+                                            {/block:Date}
+                                            
+                                            
+                                            <span class="like-icon">{LikeButton color="grey"}</span><span class="reblog-icon">{ReblogButton color="grey"}</span>
+                                            {block:NoteCount} 
+                                               <span class="notes-text"><a href="{Permalink}"> {NoteCountWithLabel}</a></span>
+                                            {/block:NoteCount}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            {block:PostNotes} 
+                                                {PostNotes-16}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>
+                                    <!------end identical post notes section ----->
+                                </li>
+                            {/block:Audio}
+                            
+                            
+                        {/block:Posts}
+                        </ul>
+                        
+                        <div class="row" id="footer">
+                            <div class="col-sm-12">
+                        
+                                {block:PermalinkPagination} 
+                                    {block:PreviousPost}
+                                        <a class="btn btn-default" id="previous-post" href="{PreviousPost}">Previous Post</a>
+                                    {/block:PreviousPost}
+                                     
+                                    {block:NextPost}
+                                        <a class="btn btn-default" id="next-post" href="{NextPost}">Next Post</a>
+                                    {/block:NextPost} 
+                                {/block:PermalinkPagination}
+                                
+                                
+                                
+                                {block:PreviousPage}
+                                    <a href="{PreviousPage}">&#171; Previous</a>
+                                {/block:PreviousPage}{block:NextPage}
+                                    <a href="{NextPage}">Next &#187;</a>
+                                {/block:NextPage}
+                                
+                                
+                    
+                                <!--<a href="/archive">Archive</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-8 for blog posts-->
+                    
+                </div>
+            </section>
+            <!--end blog section-->
+            
+            
+            <section class="animated" id="about">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <h1>About Chapels</h1>
+                        <p>Chapels is a rock band based out of Nashville, Tennessee. Debut EP "WAVES" out now. </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <!--<h2>Band Photo</h2>-->
+                        <img class="img-responsive" src="http://i288.photobucket.com/albums/ll175/chapels/Photo2-EDIT_zpsss42w0fw.png">
+                    </div>
+                </div>
+                
+            </section>
+            
+            <footer class="animated">
+                <div class="row">
+                    <div class="col-sm-3 col-sm-offset-1">
+                    
+                        <h2>Listen</h2>
+                        
+                        
+                        
+                        <ul>
+                            <li><a href="https://itunes.apple.com/us/album/waves-single/id1012604069"><i class="fa fa-apple"></i> iTunes</a></li>
+                            <li><a href="spotify:album:2sjXstf7UibvBMFZOcv38E"><i class="fa fa-spotify"></i> Spotify</a></li>
+                            <li><a href="http://www.soundcloud.com/chapelsmusic"><i class="fa fa-soundcloud"></i> Soundcloud</a></li>
+                            <li><a href="http://bit.ly/1RNKDTu"><i class="fa fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <div class="col-sm-3">
+                    
+                        <h2>Connect</h2>
+                        
+                        
+                        
+                        <ul>
+                            <li><a href="http://www.facebook.com/chapelsmusic"><i class="fa fa-facebook"></i> Facebook</a></li>
+                            <li><a href="http://www.twitter.com/chapelsmusic"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="http://www.instagram.com/chapelsmusic"><i class="fa fa-instagram"></i> Instagram</a></li>
+            
+                        </ul>
+                        
+                    </div>
+                    
+                    
+                    <div class="col-sm-4">
+                    
+                        <h2>Contact Chapels</h2>
+                        
+                        
+                        
+                        <ul class="contact">
+                            <li><a href="mailto:chapelsmusicband@gmail.com">Band:</a><span class="email"> chapelsmusicband@gmail.com</span></li>
+                            <li><a href="mailto:zachary.pigg@gmail.com">Mgmt:</a><span class="email"> zachary.pigg@gmail.com</span></li>
+                            <li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </footer>
+        
+        </div>
+        <!--end site container-->
+        
+        
+        
+        
+        
+    
+        
+        <!--Typekit fonts-->
+        <script src="//use.typekit.net/akx3xsf.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        
+        <script src="http://static.tumblr.com/smaukle/6ounk6o7u/jquery.viewportchecker.js"></script>
+        
+        
+        <!-----custom scripts -------->
+        <script>
+            //scrolling effects using animate.css and viewportchecker.js
+            $(document).ready(function() {
+                $('.post').addClass("hidden-scroll").viewportChecker({
+                    classToAdd: 'visible-scroll fadeInUp',
+                    offset: 50,
+                   });
+                $('section footer .promo-section').addClass("hidden-scroll").viewportChecker({
+                    classToAdd: 'visible-scroll fadeIn',
+                    offset: 75,
+                  });
+            });
+            
+            //sticky nav slide-down on scroll
+            $(window).scroll(function() {
+            if ($(this).scrollTop() > 1){  
+                $('.sticky-nav').addClass("sticky slideInDown");
+              }
+              else{
+                $('.sticky-nav').removeClass("sticky slideInDown");
+              }
+            });
+            
+            //nav links on click of hamburger
+            $("#menu-icon").click(function(){
+                $(".nav-links").fadeToggle();
+            });
+            
+            $("#sticky-nav-logo").click(function(){
+                $(".nav-links").hide();
+            })
+            
+            //smooth scroll 
+            $(function() {
+              $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    target.show();
+                    $('html,body').animate({
+                      scrollTop: target.offset().top-100
+                    }, 1000);
+                    $(".nav-links").fadeToggle();
+                    return false;
+                  }
+                }
+              });
+            });
+            
+            
+            // if individual posts page, hide other content
+            if (window.location.href.indexOf("/post/") > -1) {
+                $("#videos, #tour-dates, #music, #about").hide();
+            }
+            
+            
+        </script>
+    </body>
+</html>
